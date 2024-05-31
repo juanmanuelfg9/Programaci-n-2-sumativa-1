@@ -1,0 +1,153 @@
+<!--Actividad sumativa 1 elaborado por Juan Fernandez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumativa 1</title>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAEDCAMAAABQ/CumAAAAclBMVEX////4+PgDAwMAAAD8/Pynp6eZmZkwMDDT09Pb29vt7e3y8vIsLCwODg5OTk4+Pj7k5ORDQ0MUFBS7u7tJSUk4ODjQ0NDf39+fn58eHh41NTWOjo7JyclxcXESEhKDg4OxsbEmJibAwMBnZ2d6enqKiopQpuCqAAADrUlEQVR4nO3d63KaQACGYXStUYyHWBNj0ubU9v5vsXIwLCoKLLAfzvv+6GSIS3hmERQ7GAx6X+B7A9yDoBAEhSAoBEEhCApBUAiCQhAUgqAQBIUgKARBIQgKQVAIgkLBqPcFRERERERE5C3Pb8o+frjnVxDcGfc8z8LSDB0zxq8gJjhNgQTBPNd/GnxECu8EY2YO40UIocN4CE10S4TK57jneJgS4aXy4XQaDVMiVD7HmW00DEITQYDQSBAgNBIECI0EAUIjQZAifOavDhVvuexbnvxFxVWhwTznxwsR8k2LCeP8IyE0EQQNwtDs1t+9zdfR0muEx3n68J3Gle2ji/PR0muE7IMVic8X8qeDsgQb7ldw/EFVeYI1SOr/cJbfkYZm4ndTi4KgEASFICgEQSEICkFQCIJCEBSCoBAEhSAoBEEhCApBUAiCQhAUgqAQBIUgKARBIQgKQVAIgkIQFIKgEASFICgEQSEICvkmhMtF6Zbnb9/hnWAqJEso+sOnW6JLKDcFygSzDFdXCzdGmfBQ5oELCBAudEuEVfGxaNUTwoVzXH8IhRsAAQIECBAgQIAA4QJhem4Ng94QovfOyU/5RvdVbl/glTD7PGsYxYu36oTkKTC4P2OwFyoTntLNfTkxDKLNGqaLJsKEZD/Z7zTLeKcJsyLUPD1OhTtdwtB8H4o2x5f+hmad3jM8fLuwAu+EbB4iQ/43u0Hyi9n80nj/BMuwyM/CZxmBBMEyjF/HWa+lBBoEy3BuJesrgyUIlwzXBCqEYsNVQYdX8+oZZlcF6a3/2iRs4p++Shh+nvZVfEb7Hvcnvs9hqx8XJmeuXyUM5yohiItu1PbUAiF50TApaaiT+Z38pYfo5ZTL1394MxwE0WuTeSuCtg05gcs3Z3gz2IK31gRtGroS7A2P7Ri62YtsQ9ljax3BsGXBPsvw1JDBFjh9mVLJ7OdDMwbzt1tB3jBpwGDek7snd7QXtWDYC4KDoO1nsmV4bM5gz0F3gswwcjYc5mDRsWBveMmOSy4GW+D0fVx1DOmxNZqHaW2D+ZesbeNBkD/H1TWY12RdPuYgNiwzw7aWwbfgxFC9cSbo6nxw3MDal7bzqtmCbo9FdvZxqc7w6B+fcxBvxJ2TIfD5PDjkOA8CgoPh7r5eawHB4fxQNwVBfFxySUAQ70s9F+wNs9pJ3dWfiIiI6LYa9b5g0PsgKARBIQgKQVAIgkIQFIKgEASFICgEQSEICkFQCIJCEBSCoNANEP4D6Yu4E62Qg/8AAAAASUVORK5CYII=" type="image/x-icon">
+</head>
+<body>
+    <h1>Actividad Sumativa 1</h1>
+    <h2>Ejercicio 1</h2>
+    <p> Escribir un script en que muestre un mensaje de bienvenida, Fecha y hora. El script se debe incluir dentro de la página XHTML.</p>
+    
+    <script>
+//Se crea el objeto Date el cual proporciona la fecha y hora actual y se guarda en la variable date
+let date = new Date();
+let dia_del_mes = date.getDate();
+let numero_mes = date.getMonth()+1;
+let year = date.getFullYear();
+let mes;
+let hora = date.getHours();
+let minuto = date.getMinutes();
+let numero_dia = date.getDay()+1;
+let dia;
+//Se utiliza el numero de mes extraido del objeto date con la funcion getMonth() para transformarlo en el nombre del mes correspondiente 
+switch(numero_mes){
+
+    case 1:
+        mes = "enero";
+        break;
+    case 2:
+        mes = "febrero";
+        break;
+    case 3:
+        mes = "marzo";
+        break;
+    case 4:
+        mes = "abril";
+        break;
+    case 5:
+         mes = "mayo";
+        break;
+    case 6:
+         mes = "junio";
+        break;
+    case 7:
+        mes = "julio";
+            break;
+    case 8:
+        mes = "agosto";
+        break;
+    case 9:
+        mes = "septiembre";
+        break;
+    case 10:
+        mes = "octubre";
+        break;
+    case 11:
+        mes = "noviembre";
+        break;
+    case 12:
+        mes = "diciembre";
+        break;
+    default:
+        console.log('ERROR');
+    }
+  //Se utiliza el numero del dia de la semana gracias al objeto date usandon la funcion getDay() para transformarlo en el nombre del dia de la semana 
+switch (numero_dia) {
+    case 1:
+        dia = "Domingo";
+        break;
+    case 2:
+        dia = "Lunes";
+        break;
+    case 3:
+        dia = "Martes";
+        break;
+    case 4:
+         dia = "Miercoles";
+        break;
+    case 5:
+        dia = "Jueves";
+        break;
+    case 6:
+        dia = "Viernes";
+        break;
+    case 7:
+        dia = "Sabado";
+        break;
+
+    default:
+        console.log(error);
+        break;
+}
+//Se envia el mensaje 
+document.write('Bienvenido a Juans web <br>');
+document.write('Fecha: '+ dia +" "+dia_del_mes + " de "+mes+" de "+year+"<br>");
+document.write('Hora: '+hora+":"+minuto);
+</script>
+    <h2>Ejercicio 2</h2>
+    
+    <p>Escribir un script en que muestre un mensaje de bienvenida, Fecha y hora. El script se encuentra en un archivo externo codigo.js</p>
+
+    <!--Se ingresa la direccion del archivo con src-->
+    <script src="Javascript/ejercicio2.js"></script>
+    
+    <h2>Ejercicio 3</h2>
+     
+    <p> Escribir una expresión que compare dos strings y produzca un valor TRUE.</p>
+
+    <script src="Javascript/ejercicio3.js"></script>
+    <h2>Ejercicio 4</h2>
+    <p> Escribir una expresión comparando dos strings que devuelva FALSE.</p>
+<script src="Javascript/ejercicio4.js"></script>
+
+    <h2>Ejercicio 5</h2>
+    <p>Escribir una expresión que involucre un string y un número y devuelva FALSE.</p>
+ <script src="Javascript/ejercicio5.js"></script>
+
+     <h2>Ejercicio 6</h2>
+<p>Escribir una expresión que involucre un string y un número y devuelva TRUE.</p>
+
+<script src="Javascript/ejercicio6.js"></script>
+
+    <h2>Ejercicio 7</h2>
+    <p>Comprobar la siguiente expresión es verdadera o falsa, documentar su respuesta.<br>
+        let x = 25 <br>
+        let y = "a"<br>
+        y === "b" || x >= 25</p>
+
+ <script src="Javascript/ejercicio7.js">
+        
+        </script>
+        <p>En este caso resulto que la expresion es verdadero debido al uso del operador or  "||".Al analizar por uno mismo la primera expresion a comparar se puede determinar que y === "b" resulta en falso porque las variables son diferentes,luego se pasa a analizar la segunda comparacion que dice x>=25 , resultando en verdadero, ya que, x vale 25.El operador or  "||" va devolver true si al menos una o las dos expresiones son verdaderas, y va devolver false si ambas expresiones son falsas,  es por ese motivo que el resultado final dio true.   </p>
+    <h2>Ejercicio 8</h2>
+    <p>Comprobar la siguiente expresión es verdadera o falsa, documentar su respuesta.<br>
+        let x = 15<br>
+        let y = 2<br>
+        !( x == "15" || x === y ) && !(y !== 2 && x <= y)</p>
+
+<script src="Javascript/ejercicio8.js"></script>
+<p>En este caso se obtuvo como resultado false.Para analizar el motivo de ese resultado hay que destacar la presencia de dos nuevos operadores, el operador and (&&) el cual devuelve true si ambas expresiones a comparar son verdaderas y devuelvo false si una o ambas expresiones  comparar son falsas, y el operador de negacion ! el cual invierte el valor logico resultante, es decir,si decimos que 1 = 1 seria true pero si decimos que !1 = 1 el resultado seria false. <br> </p>
+
+<p>Explicado lo anterior pasamos a analisar la primera expresion a comparar !( x1 == "15" || x1 === y1), donde x1== 15 es verdadero y x1 === y1 es falso. Como se presenta el operador or podemos decir que el resultado del primer parentesis del centro en verdadero, como encontramos el operador de negacion "!" el resultado del primer parentesis (verdadero) pasa a ser falso. <br> </p>
+
+<p>Ahora analizamos  la segunda expresion a comparar  donde podemos decir que y1 !==2 es falso , ya que, y1  vale 2, y x1<=y1 es falso porque 15 > 2.Como se obtuvo dos false y hay un operador and el resultado final va ser false.Sin embargo al presentar un operador de negacion fuera del parentesis pasa a ser verdadero.<br></p>
+
+<p>En la primera expresion obtuvimos como resultado false y en la segunda expresion obtuvimos el resultado true como hay un operador and (&&), el resultado final sera false llegando al mismo resultado obtenido al relizar la comparacion mediante js</p>
+
+<footer>Este sitio ha sido hecho por Juan Fernandez</footer>
+</body>
+</html>
